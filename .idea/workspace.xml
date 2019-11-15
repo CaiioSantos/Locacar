@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc4e2893-367c-4d2a-805e-b7e385c10051" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Repository/IRepositoryClientePF.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Repository/IRepositoryClientePJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Repository/RepositoryCLientePF.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Repository/RepositoryCLientePJ.java" afterDir="false" />
+    <list default="true" id="cc4e2893-367c-4d2a-805e-b7e385c10051" name="Default Changelist" comment="Classes do repositorio criadas">
+      <change afterPath="$PROJECT_DIR$/src/com/company/Controller/ControllerClientePF.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Controller/IControllerClientePF.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Exception/ClienteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Exception/RepositoryClienteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Facade/Facade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Model/Atendente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Model/ClientePf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Model/Funcionario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Model/Gerente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Model/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Model/Veiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Locacar/com/company/Principal/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Principal/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Model/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Model/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Principal/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Repository/IRepositoryClientePF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Repository/IRepositoryClientePF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Repository/RepositoryCLientePF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Repository/RepositoryClientePF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Repository/RepositoryCLientePJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Repository/RepositoryClientePJ.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +85,14 @@
       <option name="presentableId" value="Default" />
       <updated>1573011958306</updated>
     </task>
+    <task id="LOCAL-00001" summary="Classes do repositorio criadas">
+      <created>1573709568273</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1573709568273</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,5 +107,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Classes do repositorio criadas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Classes do repositorio criadas" />
   </component>
 </project>

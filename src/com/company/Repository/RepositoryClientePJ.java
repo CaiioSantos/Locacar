@@ -1,4 +1,4 @@
 package com.company.Repository;
 
-public class RepositoryCLientePF {
+public class RepositoryClientePJ {
 }
