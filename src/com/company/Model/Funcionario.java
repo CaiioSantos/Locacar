@@ -2,8 +2,15 @@ package com.company.Model;
 
   public abstract class Funcionario extends Pessoa {
 
+      private String numeroCarteiraTrabalho;
 
+      public String getNumeroCarteiraTrabalho() {
+          return numeroCarteiraTrabalho;
+      }
 
+      public void setNumeroCarteiraTrabalho(String numeroCarteiraTrabalho) {
+          this.numeroCarteiraTrabalho = numeroCarteiraTrabalho;
+      }
 
       @Override
       public String getNome() {

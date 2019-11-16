@@ -1,6 +1,6 @@
 package com.company.Exception;
 
-public class ClienteException extends Exception {
+public class ClientePFException extends Exception {
 
     public class ClientePfException extends Exception {
         public ClientePfException(String textExeption){

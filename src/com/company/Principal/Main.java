@@ -1,7 +1,7 @@
 package com.company.Principal;
 
-import com.company.Exception.ClienteException;
-import com.company.Exception.RepositoryClienteException;
+import com.company.Exception.ClientePFException;
+import com.company.Exception.RepositoryClientePFException;
 import com.company.Facade.Facade;
 import com.company.Model.ClientePf;
 
@@ -12,7 +12,7 @@ public class Main {
 
 
 
-    public static void main(String[] args) throws ClienteException.ClientePfException, RepositoryClienteException {
+    public static void main(String[] args) throws ClientePFException.ClientePfException, RepositoryClientePFException {
 
         ClientePf clientePf = new ClientePf();
 
@@ -31,7 +31,7 @@ public class Main {
         }while (opcao !=0);
     }
 
-    private static void cadastrarCLiente(ClientePf clientePf) throws ClienteException.ClientePfException, RepositoryClienteException {
+    private static void cadastrarCLiente(ClientePf clientePf) throws ClientePFException.ClientePfException, RepositoryClientePFException {
         Facade facade = new Facade();
         Scanner input = new Scanner(System.in);
         System.out.println("Digite 1 para adicionar veiculo \n Digite 2 para lista veiculo\n Digite 3 para deletar veiculo");

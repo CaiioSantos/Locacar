@@ -1,22 +1,27 @@
 package com.company.Repository;
 
-import com.company.Exception.ClienteException;
-import com.company.Exception.RepositoryClienteException;
+import com.company.Exception.ClientePFException;
+import com.company.Exception.RepositoryClientePFException;
 import com.company.Model.ClientePf;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class RepositoryClientePF implements IRepositoryClientePF {
-    public ArrayList <ClientePf> clientePfArrayList;
+    private ArrayList <ClientePf> clientePfArrayList;
+    private static RepositoryClientePF instancia;
 
-
-
+    public static RepositoryClientePF getInstance() throws ClientePFException, RepositoryClientePFException {
+        if (instancia == null){
+            instancia =  new RepositoryClientePF();
+        }
+        return instancia;
+    }
 
 
     @Override
-    public void inserirClientePF(ClientePf clientePf) throws ClienteException.ClientePfException, RepositoryClienteException {
-        this.clientePfArrayList.add(clientePf);
+    public void inserirClientePF(ClientePf clientePf) throws ClientePFException.ClientePfException, RepositoryClientePFException {
+        clientePfArrayList.add(clientePf);
     }
 
     @Override
