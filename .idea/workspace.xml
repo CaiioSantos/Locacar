@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc4e2893-367c-4d2a-805e-b7e385c10051" name="Default Changelist" comment="" />
+    <list default="true" id="cc4e2893-367c-4d2a-805e-b7e385c10051" name="Default Changelist" comment="Preenchendo todas as camadas para teste">
+      <change afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Controller/ControllerClientePF.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Controller/IControllerClientePF.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Exception/ClienteException$ClientePfException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Exception/ClienteException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Exception/RepositoryClienteException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Facade/Facade.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Model/ClientePf.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Model/Pessoa.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Model/Plano.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Model/Veiculo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Repository/IRepositoryClientePF.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Repository/IRepositoryClientePJ.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Repository/RepositoryClientePF.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Repository/RepositoryClientePJ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Controller/ControllerClientePF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller/ControllerClientePF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Controller/IControllerClientePF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller/IControllerClientePF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exception/ClienteException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exception/ClientePFException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exception/RepositoryClienteException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exception/RepositoryClientePFException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Facade/Facade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Facade/Facade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Model/Atendente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Model/Atendente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Model/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Model/Funcionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Model/Gerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Model/Gerente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Principal/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Repository/IRepositoryClientePF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Repository/IRepositoryClientePF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Repository/RepositoryClientePF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Repository/RepositoryClientePF.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573855551164</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Preenchendo todas as camadas para teste">
+      <created>1573855801727</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573855801727</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
