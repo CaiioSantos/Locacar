@@ -2,7 +2,7 @@ package com.company.Model;
 
 
 abstract public  class Pessoa {
-    public String nome;
+    private String nome;
     private String email;
     private String endereco;
 
