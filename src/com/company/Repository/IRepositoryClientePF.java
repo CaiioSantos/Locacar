@@ -8,8 +8,8 @@ import java.util.List;
 
 public interface IRepositoryClientePF {
 
-    void inserirClientePF(ClientePf clientePf) throws ClientePFException.ClientePfException, RepositoryClientePFException;
-    void deletarClientePF(ClientePf clientePf);
+    void inserirClientePF(ClientePf clientePf) throws ClientePFException, RepositoryClientePFException;
+    void deletarClientePF(ClientePf clientePf) throws ClientePFException;
     List<ClientePf> listarCLientePF(ClientePf clientePf);
     void updateClientePF(ClientePf clientePf);
 

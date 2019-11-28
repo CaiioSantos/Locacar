@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc4e2893-367c-4d2a-805e-b7e385c10051" name="Default Changelist" comment="Preenchendo todas as camadas para teste">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Exception/ClientePJException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Exception/RepositoryClientePJException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Model/ClientePJ.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Facade/Facade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Facade/Facade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Model/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Model/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Principal/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Repository/IRepositoryClientePJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Repository/IRepositoryClientePJ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exception/ClientePFException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exception/ClientePFException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Repository/IRepositoryClientePF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Repository/IRepositoryClientePF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Repository/RepositoryClientePF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Repository/RepositoryClientePF.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

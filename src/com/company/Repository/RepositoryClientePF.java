@@ -20,13 +20,33 @@ public class RepositoryClientePF implements IRepositoryClientePF {
 
 
     @Override
-    public void inserirClientePF(ClientePf clientePf) throws ClientePFException.ClientePfException, RepositoryClientePFException {
-        clientePfArrayList.add(clientePf);
+    public void inserirClientePF(ClientePf clientePf) throws ClientePFException, RepositoryClientePFException {
+        if (clientePf == null){
+            throw new ClientePFException("Cliente Invalido");
+        }if (!existeClientePF(clientePf.getCpf())){
+            clientePfArrayList.add(clientePf);
+        }else{
+            throw new ClientePFException("Cliente já Cadastrado");
+        }
     }
 
+    private boolean existeClientePF(String cpf) {
+        for (ClientePf clientePF: clientePfArrayList) {
+            if (clientePF.getCpf().equals(cpf)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+
     @Override
-    public void deletarClientePF(ClientePf clientePf) {
-        this.clientePfArrayList.remove(clientePf);
+    public void deletarClientePF(ClientePf clientePf) throws ClientePFException {
+        if (clientePf == null){
+            throw new ClientePFException("Cliente Invalidado");
+        }if (!existeClientePF(clientePf.getCpf())){
+
+        }
     }
 
     @Override
