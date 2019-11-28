@@ -27,6 +27,8 @@ public class Main {
             switch (opcao) {
                 case 1:
                     cadastrarCLiente(clientePf);
+                case 2:
+                    listarClientes();
             }
         }while (opcao !=0);
     }
