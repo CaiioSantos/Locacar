@@ -19,7 +19,7 @@ public class Facade implements IControllerClientePF {
         }
         return instancia;
     }
-    private Facade()throws ClientePFException, RepositoryClientePFException{
+    public Facade()throws ClientePFException, RepositoryClientePFException{
         controllerClientePF = ControllerClientePF.getInstance();
     }
 

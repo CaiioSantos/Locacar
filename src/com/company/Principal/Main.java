@@ -12,7 +12,7 @@ public class Main {
 
 
 
-    public static void main(String[] args) throws ClientePFException.ClientePfException, RepositoryClientePFException {
+    public static void main(String[] args) throws ClientePFException.ClientePfException, RepositoryClientePFException, ClientePFException {
 
         ClientePf clientePf = new ClientePf();
 
@@ -31,7 +31,7 @@ public class Main {
         }while (opcao !=0);
     }
 
-    private static void cadastrarCLiente(ClientePf clientePf) throws ClientePFException.ClientePfException, RepositoryClientePFException {
+    private static void cadastrarCLiente(ClientePf clientePf) throws ClientePFException.ClientePfException, RepositoryClientePFException, ClientePFException {
         Facade facade = new Facade();
         Scanner input = new Scanner(System.in);
         System.out.println("Digite 1 para adicionar veiculo \n Digite 2 para lista veiculo\n Digite 3 para deletar veiculo");
