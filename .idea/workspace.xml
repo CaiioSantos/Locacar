@@ -2,14 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc4e2893-367c-4d2a-805e-b7e385c10051" name="Default Changelist" comment="Preenchendo todas as camadas para teste">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Exception/ClientePJException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Exception/RepositoryClientePJException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Model/ClientePJ.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Controller/ControllerClientePJ.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Controller/ControllerVeiculoPasseio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Controller/ControllerVeiculoTrabalho.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Controller/IControllerClientePJ.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Controller/IControllerVeiculoPasseio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Controller/IControllerVeiculoTrabalho.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Model/VeiculoPasseio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Model/VeiculoTrabalho.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Repository/IRepositoryVeiculoPasseio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Repository/IRepositoryVeiculoTrabalho.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Repository/RepositoryVeiculoPasseio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Repository/RepositoryVeiculoTrabalho.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Facade/Facade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Facade/Facade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Model/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Model/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Model/Plano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Model/Plano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Model/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Model/Veiculo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Principal/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Repository/IRepositoryClientePJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Repository/IRepositoryClientePJ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Repository/RepositoryClientePJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Repository/RepositoryClientePJ.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +46,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.company.Controller" />
+      <recent name="com.company.Repository" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
