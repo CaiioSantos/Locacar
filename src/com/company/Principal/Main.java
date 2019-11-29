@@ -28,7 +28,7 @@ public class Main {
                 case 1:
                     cadastrarCLiente(clientePf);
                 case 2:
-                    listarClientes();
+
             }
         }while (opcao !=0);
     }

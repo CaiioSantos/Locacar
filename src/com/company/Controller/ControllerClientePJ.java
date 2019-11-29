@@ -1,7 +1,6 @@
 package com.company.Controller;
 
 import com.company.Exception.ClientePJException;
-import com.company.Exception.RepositoryClientePFException;
 import com.company.Exception.RepositoryClientePJException;
 import com.company.Model.ClientePJ;
 import com.company.Repository.RepositoryClientePJ;
