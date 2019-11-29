@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RepositoryGerente implements IRepositoryGerente {
-    private ArrayList<Locar> gerenteArrayList;
+    private ArrayList<Gerente> gerenteArrayList;
     private static RepositoryGerente instancia;
 
     public static RepositoryGerente getInstance() {
