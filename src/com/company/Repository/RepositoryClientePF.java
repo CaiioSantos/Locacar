@@ -2,13 +2,13 @@ package com.company.Repository;
 
 import com.company.Exception.ClientePFException;
 import com.company.Exception.RepositoryClientePFException;
-import com.company.Model.ClientePf;
+import com.company.Model.ClientePF;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class RepositoryClientePF implements IRepositoryClientePF {
-    private ArrayList <ClientePf> clientePfArrayList;
+    private ArrayList <ClientePF> clientePfArrayList;
     private static RepositoryClientePF instancia;
 
     public static RepositoryClientePF getInstance() throws ClientePFException, RepositoryClientePFException {
@@ -18,20 +18,26 @@ public class RepositoryClientePF implements IRepositoryClientePF {
         return instancia;
     }
 
+    public RepositoryClientePF() throws ClientePFException , RepositoryClientePFException{
+        if (this.clientePfArrayList == null){
+            this.clientePfArrayList = new ArrayList<>();
+        }
+    }
+
 
     @Override
-    public void inserirClientePF(ClientePf clientePf) throws ClientePFException, RepositoryClientePFException {
+    public void inserirClientePF(ClientePF clientePf) throws ClientePFException, RepositoryClientePFException {
         if (clientePf == null){
-            throw new ClientePFException("Cliente Invalido");
+            throw new RepositoryClientePFException("Cliente Invalido");
         }if (!existeClientePF(clientePf.getCpf())){
             clientePfArrayList.add(clientePf);
         }else{
-            throw new ClientePFException("Cliente já Cadastrado");
+            throw new RepositoryClientePFException("Cliente já Cadastrado");
         }
     }
 
     private boolean existeClientePF(String cpf) {
-        for (ClientePf clientePF: clientePfArrayList) {
+        for (ClientePF clientePF: clientePfArrayList) {
             if (clientePF.getCpf().equals(cpf)){
                 return true;
             }
@@ -41,21 +47,32 @@ public class RepositoryClientePF implements IRepositoryClientePF {
 
 
     @Override
-    public void deletarClientePF(ClientePf clientePf) throws ClientePFException {
+    public void deletarClientePF(ClientePF clientePf) throws ClientePFException, RepositoryClientePFException {
         if (clientePf == null){
-            throw new ClientePFException("Cliente Invalidado");
-        }if (!existeClientePF(clientePf.getCpf())){
-
+            throw new RepositoryClientePFException("Cliente Invalidado");
+        }if (existeClientePF(clientePf.getCpf())){
+            clientePfArrayList.remove(clientePf);
+            System.out.println("CLiente Deletado com Sucesso");
+        }else {
+            throw new RepositoryClientePFException("Cliente Não Cadastrado");
         }
     }
 
     @Override
-    public List<ClientePf> listarCLientePF(ClientePf clientePf) {
+    public List<ClientePF> listarCLientePF(ClientePF clientePf) {
         return clientePfArrayList;
     }
 
     @Override
-    public void updateClientePF(ClientePf clientePf) {
+    public void updateClientePF(ClientePF clientePf) throws ClientePFException {
+        for (int i = 0; i <clientePfArrayList.size() ; i++) {
+            if (clientePfArrayList.get(i).getCpf().equals(clientePf)){
+                this.clientePfArrayList.set(i, clientePf);
+            }
+        }   if (clientePf == null){
+
+        }
 
     }
+
 }

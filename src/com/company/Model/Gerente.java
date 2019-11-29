@@ -3,7 +3,15 @@ package com.company.Model;
 public class Gerente extends  Funcionario {
     private String salario;
     private String situacao;
-    private String comissãoDaLoja;
+    private String comissaoDaLoja;
+
+    public String getComissaoDaLoja() {
+        return comissaoDaLoja;
+    }
+
+    public void setComissaoDaLoja(String comissaoDaLoja) {
+        this.comissaoDaLoja = comissaoDaLoja;
+    }
 
     @Override
     public String getNumeroCarteiraTrabalho() {

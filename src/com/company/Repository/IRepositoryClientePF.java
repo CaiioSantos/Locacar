@@ -2,15 +2,15 @@ package com.company.Repository;
 
 import com.company.Exception.ClientePFException;
 import com.company.Exception.RepositoryClientePFException;
-import com.company.Model.ClientePf;
+import com.company.Model.ClientePF;
 
 import java.util.List;
 
 public interface IRepositoryClientePF {
 
-    void inserirClientePF(ClientePf clientePf) throws ClientePFException, RepositoryClientePFException;
-    void deletarClientePF(ClientePf clientePf) throws ClientePFException;
-    List<ClientePf> listarCLientePF(ClientePf clientePf);
-    void updateClientePF(ClientePf clientePf);
+    void inserirClientePF(ClientePF clientePf) throws ClientePFException, RepositoryClientePFException;
+    void deletarClientePF(ClientePF clientePf) throws ClientePFException, RepositoryClientePFException;
+    List<ClientePF> listarCLientePF(ClientePF clientePf);
+    void updateClientePF(ClientePF clientePf) throws ClientePFException;
 
 }

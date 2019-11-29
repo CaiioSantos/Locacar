@@ -4,7 +4,7 @@ package com.company.Controller;
 import com.company.Exception.ClientePFException;
 import com.company.Exception.ClientePFException.ClientePfException;
 import com.company.Exception.RepositoryClientePFException;
-import com.company.Model.ClientePf;
+import com.company.Model.ClientePF;
 import com.company.Repository.RepositoryClientePF;
 
 
@@ -25,23 +25,23 @@ public class ControllerClientePF implements IControllerClientePF {
 
 
     @Override
-    public void inserirClientePF(ClientePf clientePf) throws ClientePfException, RepositoryClientePFException {
+    public void inserirClientePF(ClientePF clientePf) throws RepositoryClientePFException, ClientePFException {
           this.repositoryClientePF.inserirClientePF(clientePf);
     }
 
     @Override
-    public void deletarClientePF(ClientePf clientePf) {
-
+    public void deletarClientePF(ClientePF clientePf) throws ClientePFException, RepositoryClientePFException {
+        this.repositoryClientePF.deletarClientePF(clientePf);
     }
 
     @Override
-    public List<ClientePf> listarCLientePF(ClientePf clientePf) {
+    public List<ClientePF> listarCLientePF(ClientePF clientePf) {
         return this.repositoryClientePF.listarCLientePF(clientePf);
 
     }
 
     @Override
-    public void updateClientePF(ClientePf clientePf) {
-
+    public void updateClientePF(ClientePF clientePf) throws ClientePFException {
+    this.repositoryClientePF.updateClientePF(clientePf);
     }
 }
