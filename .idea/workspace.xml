@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc4e2893-367c-4d2a-805e-b7e385c10051" name="Default Changelist" comment="Preenchendo todas as camadas para teste">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Principal/UiCarro.java" afterDir="false" />
+    <list default="true" id="cc4e2893-367c-4d2a-805e-b7e385c10051" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Locacar/com/company/Principal/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Principal/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Model/ClientePf.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Principal/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Locacar/com/company/Model/Pessoa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Locacar/com/company/Model/Plano.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Locacar/com/company/Model/Veiculo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Locacar/com/company/Principal/Main.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573855801727</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finalizando classes para crud">
+      <created>1575011795367</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575011795367</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -120,6 +127,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Classes do repositorio criadas" />
     <MESSAGE value="Preenchendo todas as camadas para teste" />
-    <option name="LAST_COMMIT_MESSAGE" value="Preenchendo todas as camadas para teste" />
+    <MESSAGE value="Finalizando classes para crud" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalizando classes para crud" />
   </component>
 </project>
