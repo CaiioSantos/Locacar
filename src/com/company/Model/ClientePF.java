@@ -78,4 +78,14 @@ public class ClientePF extends Pessoa {
     public void setEndereco(String endereco) {
         super.setEndereco(endereco);
     }
+
+    @Override
+    public String toString() {
+        return "ClientePF{" +
+                "cpf='" + cpf + '\'' +
+                ", identidade='" + identidade + '\'' +
+                ", idade='" + idade + '\'' +
+                ", numeroCNH='" + numeroCNH + '\'' +
+                '}';
+    }
 }
