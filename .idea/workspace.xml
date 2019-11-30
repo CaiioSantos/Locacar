@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="cc4e2893-367c-4d2a-805e-b7e385c10051" name="Default Changelist" comment="Preenchendo todas as camadas para teste">
       <change afterPath="$PROJECT_DIR$/src/com/company/Principal/UiVeiculoPasseio.java" afterDir="false" />
+=======
+    <list default="true" id="bc5ba2b0-ae30-432c-8bc4-34f9f850bf75" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/Principal/UiClientePF.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Principal/UiClientePJ.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Principal/UiGerente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Principal/UiVeiculoPasseio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Principal/UiVeiculoTrabalho.java" afterDir="false" />
+>>>>>>> 4a7169e86134e9cfa83cdbfa1ca11ebe2f46e314
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Principal/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Locacar/com/company/Model/ClientePf.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Model/ClientePf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Principal/UiCarro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Principal/UiAtendente.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +44,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.company.Principal" />
       <recent name="com.company.Repository" />
     </key>
   </component>

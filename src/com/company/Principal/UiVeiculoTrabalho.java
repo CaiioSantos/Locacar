@@ -5,11 +5,10 @@ import com.company.Exception.ClientePFException;
 import com.company.Exception.RepositoryClientePFException;
 import com.company.Facade.Facade;
 import com.company.Model.ClientePF;
-import com.company.Repository.RepositoryClientePF;
 
 import java.util.Scanner;
 
-public class UiCarro {
+public class UiVeiculoTrabalho {
     Scanner scanner = new Scanner(System.in);
 
 
