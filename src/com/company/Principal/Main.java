@@ -6,14 +6,12 @@ import com.company.Facade.Facade;
 import com.company.Model.ClientePF;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
-
-
     public static void main(String[] args) throws ClientePFException.ClientePfException, RepositoryClientePFException, ClientePFException {
-
 
 
 
@@ -30,7 +28,6 @@ public class Main {
         }
         }while (opcao !=0);
     }
-
     private static void cadastrarCLiente( ) throws ClientePFException.ClientePfException, RepositoryClientePFException, ClientePFException {
         Facade facade = new Facade();
         ClientePF clientePF = new ClientePF();
@@ -58,21 +55,35 @@ public class Main {
                     break;
                 case 3:
                     facade.deletarClientePF(clientePF);
+                case 4:
+                    facade.updateClientePF(clientePF);
             }
         }while (opcao !=0);
 
+    }
+1}
 
+
+
+
+
+
+  /*  private static void menuCadastro() throws ClientePFException, RepositoryClientePFException {
+        int opcao;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Escolha uma das opções  \n1 - Cadastrar CLiente Pessoa Fisica \n2 Cadastrar Veiculo ");
+        opcao = scanner.nextInt();
+
+        switch (opcao){
+            case 1:
+                UiCarro uiCarro = new UiCarro();
+                uiCarro.showMenu();
+            case 2:
+                break;
     }
 
-    /*private static void listarClientes(ClientePF clientePfArrayList) {
-        if (clientePfArrayList != null){
-            for (int i =0; i< clientePfArrayList.size(); i++){
-                System.out.println("Nome : " + clientePfArrayList.get(i).getNome());
-            }
-        }
-    }*/
-
-
-
 }
+}*/
+
 

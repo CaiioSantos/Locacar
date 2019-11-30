@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc4e2893-367c-4d2a-805e-b7e385c10051" name="Default Changelist" comment="Preenchendo todas as camadas para teste">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Model/Locar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Repository/IRepositoryAtendente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Repository/IRepositoryGerente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Repository/IRepositoryLocar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Repository/RepositoryAtendente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Repository/RepositoryGerente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Repository/RepositoryLocar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Principal/UiCarro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Controller/ControllerClientePJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller/ControllerClientePJ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Locacar/com/company/Principal/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Locacar/com/company/Principal/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Model/ClientePf.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Principal/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
