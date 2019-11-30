@@ -19,8 +19,8 @@ public class UiClientePF {
         do{
 
             System.out.println("======Cadastro de clientes Pessoa Física======");
-            System.out.println("Escolha uma opção.\n1 - Inserir cliente\n2 - Lista CLientes\n"
-                    + "3 - Remover cliente pelo nome\n4 - Pesquisar cliente pelo cpf\n5- Pesquisar cliente pelo bairro\n"
+            System.out.println("Escolha uma opção:\n1 - Inserir cliente\n2 - Listar cliente\n"
+                    + "3 - Remover cliente\n4 - Atualizar cliente\n"
                     + "0 - Voltar ao menu principal");
             opcao = scanner.nextInt();
 
@@ -53,7 +53,7 @@ public class UiClientePF {
 
     private void atualizarCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException {
         Facade facade = new Facade();
-        facade.deletarClientePF(clientePF);
+        facade.updateClientePF(clientePF);
 
     }
 
@@ -71,7 +71,7 @@ public class UiClientePF {
 
     private void inserirCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException {
         Facade facade = new Facade();
-        facade.updateClientePF(clientePF);
+        facade.inserirClientePF(clientePF);
 
 
 
@@ -79,6 +79,8 @@ public class UiClientePF {
         clientePF.setNome(scanner.next());
         System.out.println("Digite o cpf");
         clientePF.setCpf(scanner.next());
+        System.out.println("Digite o número da identidade");
+        clientePF.setIdentidade(scanner.next());
         System.out.println("Digite o email");
         clientePF.setEmail(scanner.next());
         System.out.println("Digite a idade");
