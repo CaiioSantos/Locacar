@@ -10,5 +10,5 @@ public interface IRepositoryGerente {
     void inserir(Gerente gerente);
     void deletar(Gerente gerente);
     List<Gerente> listar(Gerente gerente);
-    void update(Gerente gerente);
+    void atualizarGerente(Gerente gerente);
 }

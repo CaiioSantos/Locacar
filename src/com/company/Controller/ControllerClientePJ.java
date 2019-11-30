@@ -22,21 +22,21 @@ public class ControllerClientePJ implements IControllerClientePJ {
 
     @Override
     public void inserirClientePJ(ClientePJ clientePJ) throws ClientePJException, RepositoryClientePJException {
-
+            this.repositoryClientePJ.inserirClientePJ(clientePJ);
     }
 
     @Override
     public void deletarClientePJ(ClientePJ clientePJ) {
-
+        this.repositoryClientePJ.deletarClientePJ(clientePJ);
     }
 
     @Override
     public List<ClientePJ> listarCLientePJ(ClientePJ clientePJ) {
-        return null;
+        return this.repositoryClientePJ.listarClientePJ(clientePJ);
     }
 
     @Override
     public void updateClientePJ(ClientePJ clientePJ) {
-
+        this.repositoryClientePJ.updateClientePJ(clientePJ);
     }
 }

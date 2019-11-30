@@ -19,17 +19,17 @@ public class RepositoryVeiculoPasseio implements IRepositoryVeiculoPasseio {
 
     @Override
     public void inserirVeiculoPasseio(VeiculoPasseio veiculoPasseio) {
-
+        this.veiculoPasseioArrayList.add(veiculoPasseio);
     }
 
     @Override
     public void deletarVeiculoPasseio(VeiculoPasseio veiculoPasseio) {
-
+        this.veiculoPasseioArrayList.remove(veiculoPasseio);
     }
 
     @Override
     public List<VeiculoPasseio> listarVeiculoPasseio(VeiculoPasseio veiculoPasseio) {
-        return null;
+        return veiculoPasseioArrayList;
     }
 
     @Override

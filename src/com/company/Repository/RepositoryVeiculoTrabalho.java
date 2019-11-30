@@ -19,17 +19,17 @@ public class RepositoryVeiculoTrabalho implements IRepositoryVeiculoTrabalho {
 
     @Override
     public void inserirVeiculoTrabalho(VeiculoTrabalho veiculoTrabalho) {
-
+        this.VeiculoTrabalhoArrayList.add(veiculoTrabalho);
     }
 
     @Override
     public void deletarVeiculoTrabalho(VeiculoTrabalho veiculoTrabalho) {
-
+        this.VeiculoTrabalhoArrayList.remove(veiculoTrabalho);
     }
 
     @Override
     public List<VeiculoTrabalho> listarVeiculoTrabalho(VeiculoTrabalho veiculoTrabalho) {
-        return null;
+        return VeiculoTrabalhoArrayList;
     }
 
     @Override

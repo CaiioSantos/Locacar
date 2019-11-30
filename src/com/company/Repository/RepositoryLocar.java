@@ -7,30 +7,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RepositoryLocar implements IRepositoryLocar {
-    private ArrayList<Locar> locarArrayList;
+    private ArrayList <Locar> locarArrayList;
     private static RepositoryLocar instancia;
 
-    public static RepositoryLocar getInstance() {
-        if (instancia == null) {
+    public static RepositoryLocar getInstance()  {
+        if (instancia == null){
             instancia = new RepositoryLocar();
         }
         return instancia;
     }
 
+    public RepositoryLocar() {
+        if (this.locarArrayList == null){
+            this.locarArrayList = new ArrayList<>();
+        }
+    }
 
     @Override
     public void inserir(Locar locar) {
-
+        this.locarArrayList.add(locar);
     }
 
     @Override
     public void deletar(Locar locar) {
-
+        this.locarArrayList.remove(locar);
     }
 
     @Override
     public List<Locar> listar(Locar locar) {
-        return null;
+        return this.locarArrayList;
     }
 
     @Override
