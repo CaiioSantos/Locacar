@@ -1,13 +1,12 @@
 package com.company.Repository;
 
 import com.company.Model.Atendente;
-import com.company.Model.Locar;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class RepositoryAtendente implements IRepositoryAtendente {
-    private ArrayList<Locar> gerenteArrayList;
+    private ArrayList<Atendente> gerenteArrayList;
     private static RepositoryAtendente instancia;
 
     public static RepositoryAtendente getInstance() {
