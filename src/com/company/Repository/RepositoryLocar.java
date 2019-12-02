@@ -3,7 +3,6 @@ package com.company.Repository;
 
 import com.company.Exception.GerenteException;
 import com.company.Exception.RepositoryClientePFException;
-import com.company.Model.Gerente;
 import com.company.Model.Locar;
 
 import java.util.ArrayList;
@@ -44,5 +43,6 @@ public class RepositoryLocar implements IRepositoryLocar {
     @Override
     public void update(Locar locar) {
 
+        return ;
     }
 }

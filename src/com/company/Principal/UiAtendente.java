@@ -87,7 +87,7 @@ public class UiAtendente {
         try {
             facade.inserirAtendente(atendente);
             showMenu();
-        }catch (RepositoryAtendenteException e){
+        }catch(Exception e){
             System.out.println("Opa Deu merda");
         }
     }

@@ -33,22 +33,17 @@ public class ControllerLocar implements IControllerLocar  {
 
     @Override
     public void inserirLocar(Locar locar) {
-
-    }
-
-    @Override
-    public void deletarLOcar(Locar locar) {
-
+        this.repositoryLocar.inserir(locar);
     }
 
     @Override
     public void deletarLocar(Locar locar) {
-
+        this.repositoryLocar.deletar(locar);
     }
 
     @Override
     public List<Locar> listaLocar(Locar locar) {
-        return null;
+        return this.repositoryLocar.update(locar);
     }
 
     @Override

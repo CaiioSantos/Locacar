@@ -2,8 +2,8 @@ package com.company.Exception;
 
 
     public class AtendenteException extends Exception {
-        public AtendenteException(String textExeption){
-            super(textExeption);
+        public AtendenteException(String e){
+            super(e);
         }
     }
 
