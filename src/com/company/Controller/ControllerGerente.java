@@ -38,7 +38,8 @@ public class ControllerGerente implements IControllerGerente {
     }
 
     @Override
-    public void atualizarGerente(Gerente gerente) {
+    public List<Gerente> atualizarGerente(Gerente gerente) {
         this.repositoryGerente.atualizarGerente(gerente);
+        return null;
     }
 }

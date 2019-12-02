@@ -10,7 +10,7 @@ public class RepositoryAtendente implements IRepositoryAtendente {
     private static RepositoryAtendente instancia;
 
     public RepositoryAtendente(){
-        
+
     }
     public static RepositoryAtendente getInstance() {
         if (instancia == null) {

@@ -93,13 +93,14 @@ public class Facade implements IControllerClientePF, IControllerClientePJ, ICont
     }
 
     @Override
-    public List<Gerente> listaGerente(Gerente gerente) {
-        return this.controllerGerente.listaGerente(gerente);
+    public List<Gerente> listarGerente(Gerente gerente) {
+        return this.controllerGerente.listarGerente(gerente);
     }
 
     @Override
-    public void atualizarGerente(Gerente gerente) {
+    public List<Gerente> atualizarGerente(Gerente gerente) {
 
+        return this.controllerGerente.atualizarGerente(gerente);
     }
     // metodos relacionados a Atendentes
     @Override
