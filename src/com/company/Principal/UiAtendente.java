@@ -1,9 +1,8 @@
 package com.company.Principal;
 
-import com.company.Exception.ClientePFException;
-import com.company.Exception.RepositoryClientePFException;
+import com.company.Exception.*;
 import com.company.Facade.Facade;
-import com.company.Model.ClientePF;
+import com.company.Model.Atendente;
 
 import java.util.Scanner;
 
@@ -11,26 +10,33 @@ public class UiAtendente {
     Scanner scanner = new Scanner(System.in);
 
 
-    public void showMenu() throws ClientePFException, RepositoryClientePFException {
-        ClientePF clientePF = new ClientePF();
+    public void showMenu() throws ClientePFException, RepositoryClientePFException, GerenteException, ClientePJException, RepositoryClientePJException {
+        Atendente atendente = new Atendente();
         Facade facade = new Facade();
         int opcao = 0;
 
         do{
 
-            System.out.println("======Cadastro de clintes======");
-            System.out.println("Escolha uma opção.\n1 - Inserir cliente\n2 - Lista CLientes\n"
-                    + "3 - Remover cliente pelo nome\n4 - Pesquisar cliente pelo cpf\n5- Pesquisar cliente pelo bairro\n"
+            System.out.println("======Cadastro de atentendes======");
+            System.out.println("Escolha uma opção:\n1 - Inserir atendente\n2 - Listar atendente\n"
+                    + "3 - Remover atendente\n4 - Atualizar atendente\n"
                     + "0 - Voltar ao menu principal");
             opcao = scanner.nextInt();
 
 
             switch(opcao){
                 case 1:
-                    inserirCliente();
+                    inserirAtendente(atendente);
                     break;
                 case 2:
-                    listarClientes(clientePF);
+                    listarAtendente(atendente);
+                    break;
+                case 3:
+                    deletarAtendente(atendente);
+                    break;
+                case 4:
+                    atualizarAtendente(atendente);
+                    break;
                 case 0:
                     break;
                 default:
@@ -44,32 +50,44 @@ public class UiAtendente {
 
     }
 
-
-
-    private void listarClientes(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException {
+    private void atualizarAtendente(Atendente atendente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
         Facade facade = new Facade();
-        facade.listarCLientePF(clientePF);
+        facade.atualizarAtendente(atendente);
     }
 
-    private void inserirCliente() throws ClientePFException, RepositoryClientePFException {
+    private void deletarAtendente(Atendente atendente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
         Facade facade = new Facade();
-        ClientePF clientePF = new ClientePF();
+        facade.deletarAtendente(atendente);
+    }
+
+    private void listarAtendente(Atendente atendente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+        Facade facade = new Facade();
+        facade.listarAtendente(atendente);
+    }
+
+    private void inserirAtendente(Atendente atendente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+        Facade facade = new Facade();
+        facade.inserirAtendente(atendente);
+
 
 
         System.out.println("Digite o nome");
-        clientePF.setNome(scanner.next());
-        System.out.println("Digite o cpf");
-        clientePF.setCpf(scanner.next());
+        atendente.setNome(scanner.next());
         System.out.println("Digite o email");
-        clientePF.setEmail(scanner.next());
-        System.out.println("Digite a idade");
-        clientePF.setIdade(scanner.next());
-        System.out.println("Numero da CNH");
-        clientePF.setNumeroCNH(scanner.next());
+        atendente.setEmail(scanner.next());
+        System.out.println("Digite o endereço");
+        atendente.setEndereco(scanner.next());
+        System.out.println("Digite o número da ctps");
+        atendente.setNumeroCarteiraTrabalho(scanner.next());
+        System.out.println("Digite a comissão");
+        atendente.setComissaoVenda(scanner.next());
+
+
+
         try {
-            facade.inserirClientePF(clientePF);
+            facade.inserirAtendente(atendente);
             showMenu();
-        }catch (RepositoryClientePFException e){
+        }catch (RepositoryAtendenteException e){
             System.out.println("Opa Deu merda");
         }
     }

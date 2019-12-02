@@ -1,9 +1,8 @@
 package com.company.Principal;
 
-import com.company.Exception.ClientePFException;
-import com.company.Exception.RepositoryClientePFException;
+import com.company.Exception.*;
 import com.company.Facade.Facade;
-import com.company.Model.ClientePF;
+import com.company.Model.Gerente;
 
 import java.util.Scanner;
 
@@ -11,26 +10,33 @@ public class UiGerente {
     Scanner scanner = new Scanner(System.in);
 
 
-    public void showMenu() throws ClientePFException, RepositoryClientePFException {
-        ClientePF clientePF = new ClientePF();
+    public void showMenu() throws ClientePFException, RepositoryClientePFException, GerenteException, ClientePJException, RepositoryClientePJException {
+        Gerente gerente = new Gerente();
         Facade facade = new Facade();
         int opcao = 0;
 
         do{
 
-            System.out.println("======Cadastro de clintes======");
-            System.out.println("Escolha uma opção.\n1 - Inserir cliente\n2 - Lista CLientes\n"
-                    + "3 - Remover cliente pelo nome\n4 - Pesquisar cliente pelo cpf\n5- Pesquisar cliente pelo bairro\n"
+            System.out.println("======Cadastro de gerente======");
+            System.out.println("Escolha uma opção:\n1 - Inserir gerente\n2 - Listar gerente\n"
+                    + "3 - Remover gerente\n4 - Atualizar gerente\n"
                     + "0 - Voltar ao menu principal");
             opcao = scanner.nextInt();
 
 
             switch(opcao){
                 case 1:
-                    inserirCliente();
+                    inserirGerente(gerente);
                     break;
                 case 2:
-                    listarClientes(clientePF);
+                    listarGerente(gerente);
+                    break;
+                case 3:
+                    deletarGerente(gerente);
+                    break;
+                case 4:
+                    atualizarGerente(gerente);
+                    break;
                 case 0:
                     break;
                 default:
@@ -44,32 +50,48 @@ public class UiGerente {
 
     }
 
-
-
-    private void listarClientes(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException {
+    private void atualizarGerente(Gerente gerente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
         Facade facade = new Facade();
-        facade.listarCLientePF(clientePF);
+        facade.atualizarGerente(gerente);
     }
 
-    private void inserirCliente() throws ClientePFException, RepositoryClientePFException {
+    private void deletarGerente(Gerente gerente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
         Facade facade = new Facade();
-        ClientePF clientePF = new ClientePF();
+        facade.deletarGerente(gerente);
+    }
+
+    private void listarGerente(Gerente gerente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+        Facade facade = new Facade();
+        facade.listarGerente(gerente);
+    }
+
+    private void inserirGerente(Gerente gerente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+        Facade facade = new Facade();
+        facade.inserirGerente(gerente);
+
+
+
 
 
         System.out.println("Digite o nome");
-        clientePF.setNome(scanner.next());
-        System.out.println("Digite o cpf");
-        clientePF.setCpf(scanner.next());
+        gerente.setNome(scanner.next());
         System.out.println("Digite o email");
-        clientePF.setEmail(scanner.next());
-        System.out.println("Digite a idade");
-        clientePF.setIdade(scanner.next());
-        System.out.println("Numero da CNH");
-        clientePF.setNumeroCNH(scanner.next());
+        gerente.setEmail(scanner.next());
+        System.out.println("Digite o endereço");
+        gerente.setEndereco(scanner.next());
+        System.out.println("Digite o salário");
+        gerente.setSalario(scanner.next());
+        System.out.println("Digite a situação");
+        gerente.setSituacao(scanner.next());
+        System.out.println("Digite a comissão");
+        gerente.setComissaoDaLoja(scanner.next());
+
+
+
         try {
-            facade.inserirClientePF(clientePF);
+            facade.inserirGerente(gerente);
             showMenu();
-        }catch (RepositoryClientePFException e){
+        }catch (RepositoryGerenteException e){
             System.out.println("Opa Deu merda");
         }
     }

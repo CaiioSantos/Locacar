@@ -3,9 +3,41 @@ package com.company.Model;
 public class ClientePJ extends Pessoa {
 
     private String cnpj;
-    private String Fantasia;
+    private String fantasia;
     private String numeroCNH;
 
+    public ClientePJ() {
+    }
+
+    public ClientePJ(String cnpj, String fantasia, String numeroCNH) {
+        this.cnpj = cnpj;
+        this.fantasia = fantasia;
+        this.numeroCNH = numeroCNH;
+    }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+
+    public String getFantasia() {
+        return fantasia;
+    }
+
+    public void setFantasia(String fantasia) {
+        this.fantasia = fantasia;
+    }
+
+    public String getNumeroCNH() {
+        return numeroCNH;
+    }
+
+    public void setNumeroCNH(String numeroCNH) {
+        this.numeroCNH = numeroCNH;
+    }
 
     @Override
     public String getNome() {

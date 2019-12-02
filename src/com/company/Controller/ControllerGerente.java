@@ -33,7 +33,7 @@ public class ControllerGerente implements IControllerGerente {
     }
 
     @Override
-    public List<Gerente> listaGerente(Gerente gerente) {
+    public List<Gerente> listarGerente(Gerente gerente) {
         return repositoryGerente.listar(gerente);
     }
 

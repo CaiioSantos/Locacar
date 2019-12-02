@@ -1,7 +1,6 @@
 package com.company.Principal;
 
-import com.company.Exception.ClientePFException;
-import com.company.Exception.RepositoryClientePFException;
+import com.company.Exception.*;
 import com.company.Facade.Facade;
 import com.company.Model.ClientePF;
 
@@ -14,14 +13,14 @@ public class Main {
 
 
 
-    public static void main(String[] args) throws ClientePFException.ClientePfException, RepositoryClientePFException, ClientePFException {
+    public static void main(String[] args) throws RepositoryClientePFException, ClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
 
         int opcao;
 
         Scanner s = new Scanner(System.in);
 
 
-        System.out.println("Escolha uma opção \n1 - Cadastro de CLiente Fisica \n2 - Cadastro Cliente Juridia ");
+        System.out.println("Escolha uma opção \n1 - Cadastro de CLiente Fisica \n2 - Cadastro Cliente Juridica ");
         opcao = s.nextInt();
 
         switch (opcao) {

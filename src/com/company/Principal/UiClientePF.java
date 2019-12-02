@@ -1,7 +1,6 @@
 package com.company.Principal;
 
-import com.company.Exception.ClientePFException;
-import com.company.Exception.RepositoryClientePFException;
+import com.company.Exception.*;
 import com.company.Facade.Facade;
 import com.company.Model.ClientePF;
 
@@ -11,7 +10,7 @@ public class UiClientePF {
     Scanner scanner = new Scanner(System.in);
 
 
-    public void showMenu() throws ClientePFException, RepositoryClientePFException {
+    public void showMenu() throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
         ClientePF clientePF = new ClientePF();
         Facade facade = new Facade();
         int opcao = 0;
@@ -19,8 +18,8 @@ public class UiClientePF {
         do{
 
             System.out.println("======Cadastro de clientes Pessoa Física======");
-            System.out.println("Escolha uma opção.\n1 - Inserir cliente\n2 - Lista CLientes\n"
-                    + "3 - Remover cliente pelo nome\n4 - Pesquisar cliente pelo cpf\n5- Pesquisar cliente pelo bairro\n"
+            System.out.println("Escolha uma opção:\n1 - Inserir cliente\n2 - Listar cliente\n"
+                    + "3 - Remover cliente\n4 - Atualizar cliente\n"
                     + "0 - Voltar ao menu principal");
             opcao = scanner.nextInt();
 
@@ -51,27 +50,27 @@ public class UiClientePF {
 
     }
 
-    private void atualizarCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException {
+    private void atualizarCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
+        Facade facade = new Facade();
+        facade.updateClientePF(clientePF);
+
+    }
+
+    private void deletarCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
         Facade facade = new Facade();
         facade.deletarClientePF(clientePF);
 
     }
 
-    private void deletarCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException {
-        Facade facade = new Facade();
-        facade.deletarClientePF(clientePF);
 
-    }
-
-
-    private void listarCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException {
+    private void listarCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
         Facade facade = new Facade();
         facade.listarCLientePF(clientePF);
     }
 
-    private void inserirCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException {
+    private void inserirCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
         Facade facade = new Facade();
-        facade.updateClientePF(clientePF);
+        facade.inserirClientePF(clientePF);
 
 
 
@@ -79,6 +78,8 @@ public class UiClientePF {
         clientePF.setNome(scanner.next());
         System.out.println("Digite o cpf");
         clientePF.setCpf(scanner.next());
+        System.out.println("Digite o número da identidade");
+        clientePF.setIdentidade(scanner.next());
         System.out.println("Digite o email");
         clientePF.setEmail(scanner.next());
         System.out.println("Digite a idade");
