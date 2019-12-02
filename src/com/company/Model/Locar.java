@@ -7,6 +7,16 @@ public class Locar {
     private String dataInicio;
     private String dataEntrega;
 
+    public Locar() {
+    }
+
+    public Locar(String cliente, String veiculo, String dataInicio, String dataEntrega) {
+        this.cliente = cliente;
+        this.veiculo = veiculo;
+        this.dataInicio = dataInicio;
+        this.dataEntrega = dataEntrega;
+    }
+
     public String getCliente() {
         return cliente;
     }

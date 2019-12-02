@@ -25,7 +25,6 @@ public class RepositoryGerente implements IRepositoryGerente {
         }
     }
 
-
     @Override
     public void inserir(Gerente gerente) {
         this.gerenteArrayList.add(gerente);

@@ -20,7 +20,7 @@ public class Facade implements IControllerClientePF, IControllerClientePJ, ICont
     private  IControllerVeiculoPasseio controllerVeiculoPasseio;
     private IControllerVeiculoTrabalho iControllerVeiculoTrabalho = ControllerVeiculoTrabalho.getInstance();
     private IControllerVeiculoTrabalho controllerVeiculoTrabalho;
-    private IControllerLocar iControllerLocar = ControllerLocar.
+    private IControllerLocar iControllerLocar = ControllerLocar.getInstance();
 
     private static Facade getInstance() throws ClientePFException, RepositoryClientePFException, ClientePJException, RepositoryClientePJException, GerenteException {
         if(instancia == null){
@@ -98,7 +98,7 @@ public class Facade implements IControllerClientePF, IControllerClientePJ, ICont
     }
 
     @Override
-    public void atualizarGerente(Gerente atendente) {
+    public void atualizarGerente(Gerente gerente) {
 
     }
     // metodos relacionados a Atendentes
@@ -122,6 +122,8 @@ public class Facade implements IControllerClientePF, IControllerClientePJ, ICont
         this.controllerAtendente.atualizarAtendente(atendente);
     }
 
+
+    //Metodos referentes ao veiculo passeio
     @Override
     public void inserirVeiculoPasseio(VeiculoPasseio veiculoPasseio) {
         this.controllerVeiculoPasseio.inserirVeiculoPasseio(veiculoPasseio);
