@@ -21,6 +21,7 @@ public class Facade implements IControllerClientePF, IControllerClientePJ, ICont
     private IControllerVeiculoTrabalho iControllerVeiculoTrabalho = ControllerVeiculoTrabalho.getInstance();
     private IControllerVeiculoTrabalho controllerVeiculoTrabalho;
     private IControllerLocar iControllerLocar = ControllerLocar.getInstance();
+    private IControllerLocar controllerLocar;
 
     private static Facade getInstance() throws ClientePFException, RepositoryClientePFException, ClientePJException, RepositoryClientePJException, GerenteException {
         if(instancia == null){
@@ -166,4 +167,19 @@ public class Facade implements IControllerClientePF, IControllerClientePJ, ICont
     }
 
 
+    public void inserirLocar(Locar locar) {
+        this.controllerLocar.inserirLocar(locar);
+    }
+
+    public void listarLocar(Locar locar) {
+        this.controllerLocar.listarLocar(locar);
+    }
+
+    public void deletarLocar(Locar locar) {
+        this.controllerLocar.deletarLocar(locar);
+    }
+
+    public void atualizarLocar(Locar locar) {
+        this.controllerLocar.atualizarLocar(locar);
+    }
 }
