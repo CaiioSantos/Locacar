@@ -1,7 +1,6 @@
 package com.company.Principal;
 
-import com.company.Exception.ClientePFException;
-import com.company.Exception.RepositoryClientePFException;
+import com.company.Exception.*;
 import com.company.Facade.Facade;
 import com.company.Model.Atendente;
 
@@ -11,7 +10,7 @@ public class UiAtendente {
     Scanner scanner = new Scanner(System.in);
 
 
-    public void showMenu() throws ClientePFException, RepositoryClientePFException {
+    public void showMenu() throws ClientePFException, RepositoryClientePFException, GerenteException, ClientePJException, RepositoryClientePJException {
         Atendente atendente = new Atendente();
         Facade facade = new Facade();
         int opcao = 0;
@@ -51,24 +50,24 @@ public class UiAtendente {
 
     }
 
-    private void atualizarAtendente(Atendente atendente) {
+    private void atualizarAtendente(Atendente atendente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
         Facade facade = new Facade();
-        facade.updateAtendente(atendente);
+        facade.atualizarAtendente(atendente);
     }
 
-    private void deletarAtendente(Atendente atendente) {
+    private void deletarAtendente(Atendente atendente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
         Facade facade = new Facade();
         facade.deletarAtendente(atendente);
     }
 
-    private void listarAtendente(Atendente atendente) {
+    private void listarAtendente(Atendente atendente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
         Facade facade = new Facade();
         facade.listarAtendente(atendente);
     }
 
-    private void inserirAtendente(Atendente atendente) {
+    private void inserirAtendente(Atendente atendente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
         Facade facade = new Facade();
-        facade.inserirAtentende(atendente);
+        facade.inserirAtendente(atendente);
 
 
 

@@ -1,7 +1,6 @@
 package com.company.Principal;
 
-import com.company.Exception.ClientePFException;
-import com.company.Exception.RepositoryClientePFException;
+import com.company.Exception.*;
 import com.company.Facade.Facade;
 import com.company.Model.ClientePF;
 
@@ -11,7 +10,7 @@ public class UiClientePF {
     Scanner scanner = new Scanner(System.in);
 
 
-    public void showMenu() throws ClientePFException, RepositoryClientePFException {
+    public void showMenu() throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
         ClientePF clientePF = new ClientePF();
         Facade facade = new Facade();
         int opcao = 0;
@@ -51,25 +50,25 @@ public class UiClientePF {
 
     }
 
-    private void atualizarCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException {
+    private void atualizarCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
         Facade facade = new Facade();
         facade.updateClientePF(clientePF);
 
     }
 
-    private void deletarCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException {
+    private void deletarCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
         Facade facade = new Facade();
         facade.deletarClientePF(clientePF);
 
     }
 
 
-    private void listarCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException {
+    private void listarCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
         Facade facade = new Facade();
         facade.listarCLientePF(clientePF);
     }
 
-    private void inserirCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException {
+    private void inserirCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
         Facade facade = new Facade();
         facade.inserirClientePF(clientePF);
 

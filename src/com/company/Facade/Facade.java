@@ -20,7 +20,7 @@ public class Facade implements IControllerClientePF, IControllerClientePJ, ICont
     private  IControllerVeiculoPasseio controllerVeiculoPasseio;
     private IControllerVeiculoTrabalho iControllerVeiculoTrabalho = ControllerVeiculoTrabalho.getInstance();
     private IControllerVeiculoTrabalho controllerVeiculoTrabalho;
-    private IControllerLocar iControllerLocar = ControllerLocar.
+    //private IControllerLocar iControllerLocar = ControllerLocar.
 
     private static Facade getInstance() throws ClientePFException, RepositoryClientePFException, ClientePJException, RepositoryClientePJException, GerenteException {
         if(instancia == null){
@@ -93,8 +93,8 @@ public class Facade implements IControllerClientePF, IControllerClientePJ, ICont
     }
 
     @Override
-    public List<Gerente> listaGerente(Gerente gerente) {
-        return this.controllerGerente.listaGerente(gerente);
+    public List<Gerente> listarGerente(Gerente gerente) {
+        return this.controllerGerente.listarGerente(gerente);
     }
 
     @Override
@@ -161,6 +161,7 @@ public class Facade implements IControllerClientePF, IControllerClientePJ, ICont
     public void updateVeiculoTrabalho(VeiculoTrabalho veiculoTrabalho) {
         this.controllerVeiculoTrabalho.updateVeiculoTrabalho(veiculoTrabalho);
     }
+
 
 
 }

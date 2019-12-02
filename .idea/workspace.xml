@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc5ba2b0-ae30-432c-8bc4-34f9f850bf75" name="Default Changelist" comment="">
+    <list default="true" id="623b6d65-82f3-4556-83af-e024e5bd3ae5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Model/ClientePJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Model/ClientePJ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Controller/ControllerGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller/ControllerGerente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Controller/IControllerGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller/IControllerGerente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exception/RepositoryVeiculoPasseioException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exception/RepositoryVeiculoPasseioException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Facade/Facade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Facade/Facade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Principal/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Principal/UiAtendente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Principal/UiAtendente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Principal/UiClientePF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Principal/UiClientePF.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Principal/UiClientePJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Principal/UiClientePJ.java" afterDir="false" />
@@ -77,7 +82,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cc4e2893-367c-4d2a-805e-b7e385c10051" name="Default Changelist" comment="" />
+      <changelist id="623b6d65-82f3-4556-83af-e024e5bd3ae5" name="Default Changelist" comment="" />
       <created>1573011958306</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

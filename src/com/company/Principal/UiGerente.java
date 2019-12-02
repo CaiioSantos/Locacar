@@ -1,7 +1,6 @@
 package com.company.Principal;
 
-import com.company.Exception.ClientePFException;
-import com.company.Exception.RepositoryClientePFException;
+import com.company.Exception.*;
 import com.company.Facade.Facade;
 import com.company.Model.Gerente;
 
@@ -11,7 +10,7 @@ public class UiGerente {
     Scanner scanner = new Scanner(System.in);
 
 
-    public void showMenu() throws ClientePFException, RepositoryClientePFException {
+    public void showMenu() throws ClientePFException, RepositoryClientePFException, GerenteException, ClientePJException, RepositoryClientePJException {
         Gerente gerente = new Gerente();
         Facade facade = new Facade();
         int opcao = 0;
@@ -51,22 +50,22 @@ public class UiGerente {
 
     }
 
-    private void atualizarGerente(Gerente gerente) {
+    private void atualizarGerente(Gerente gerente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
         Facade facade = new Facade();
-        facade.updateGerente(gerente);
+        facade.atualizarGerente(gerente);
     }
 
-    private void deletarGerente(Gerente gerente) {
+    private void deletarGerente(Gerente gerente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
         Facade facade = new Facade();
         facade.deletarGerente(gerente);
     }
 
-    private void listarGerente(Gerente gerente) {
+    private void listarGerente(Gerente gerente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
         Facade facade = new Facade();
         facade.listarGerente(gerente);
     }
 
-    private void inserirGerente(Gerente gerente) {
+    private void inserirGerente(Gerente gerente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
         Facade facade = new Facade();
         facade.inserirGerente(gerente);
 

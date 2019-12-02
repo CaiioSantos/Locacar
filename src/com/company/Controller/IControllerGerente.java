@@ -8,7 +8,7 @@ public interface IControllerGerente {
 
     void inserirGerente(Gerente gerente) ;
     void deletarGerente(Gerente gerente) ;
-    List<Gerente> listaGerente(Gerente gerente);
+    List<Gerente> listarGerente(Gerente gerente);
     void atualizarGerente(Gerente atendente) ;
 
 }
