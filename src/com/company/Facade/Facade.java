@@ -44,7 +44,7 @@ public class Facade implements IControllerClientePF, IControllerClientePJ, ICont
     }
 
     @Override
-    public void deletarClientePF(String cpf) throws ClientePFException, RepositoryClientePFException {
+    public void deletarClientePF(ClientePF cpf) throws ClientePFException, RepositoryClientePFException {
         this.controllerClientePF.deletarClientePF(cpf);
     }
 

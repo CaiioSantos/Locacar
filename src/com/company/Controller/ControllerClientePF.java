@@ -2,7 +2,6 @@ package com.company.Controller;
 
 
 import com.company.Exception.ClientePFException;
-import com.company.Exception.ClientePFException.ClientePfException;
 import com.company.Exception.RepositoryClientePFException;
 import com.company.Model.ClientePF;
 import com.company.Repository.RepositoryClientePF;
@@ -30,8 +29,8 @@ public class ControllerClientePF implements IControllerClientePF {
     }
 
     @Override
-    public void deletarClientePF(ClientePF clientePf) throws ClientePFException, RepositoryClientePFException {
-        this.repositoryClientePF.deletarClientePF(clientePf);
+    public void deletarClientePF(ClientePF cpf) throws ClientePFException, RepositoryClientePFException {
+        this.repositoryClientePF.deletarClientePF(cpf);
     }
 
     @Override

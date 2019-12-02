@@ -60,20 +60,20 @@ public class UiClientePF {
         clientePF.setNumeroCNH(scanner.next());
         try {
                 facade.updateClientePF(clientePF);
-        }catch (ClientePFException | RepositoryClientePFException e){
+        }catch (ClientePFException e){
             e.printStackTrace();
         }
 
     }
 
     private void deletarCliente(String cpf) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
+        Facade facade = new Facade();
         System.out.println("Digite o CLiente a ser deletado");
         ClientePF clientePF = new ClientePF();
         clientePF.setCpf(scanner.next());
 
 
         try {
-            Facade facade = new Facade();
             facade.deletarClientePF(clientePF);
         }catch (Exception e){
             e.getMessage();

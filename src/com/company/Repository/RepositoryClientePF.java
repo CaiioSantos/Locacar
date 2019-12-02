@@ -47,7 +47,7 @@ public class RepositoryClientePF implements IRepositoryClientePF {
 
 
     @Override
-    public void deletarClientePF(ClientePF clientePf) throws ClientePFException, RepositoryClientePFException {
+    public void deletarClientePF(String clientePf) throws ClientePFException, RepositoryClientePFException {
         if (clientePf == null){
             throw new RepositoryClientePFException("Cliente Invalidado");
         }if (existeClientePF(clientePf.getCpf())){
