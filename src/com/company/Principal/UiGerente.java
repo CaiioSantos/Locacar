@@ -91,7 +91,7 @@ public class UiGerente {
         try {
             facade.inserirGerente(gerente);
             showMenu();
-        }catch (RepositoryGerenteException e){
+        }catch (Exception e){
             System.out.println("Opa Deu merda");
         }
     }
