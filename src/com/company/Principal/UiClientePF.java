@@ -4,15 +4,15 @@ import com.company.Exception.*;
 import com.company.Facade.Facade;
 import com.company.Model.ClientePF;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UiClientePF {
     Scanner scanner = new Scanner(System.in);
 
 
-    public void showMenu() throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
+    public void showMenu(Facade facade) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         ClientePF clientePF = new ClientePF();
-        Facade facade = new Facade();
         int opcao = 0;
         String cpf = null;
 
@@ -30,7 +30,7 @@ public class UiClientePF {
                     inserirCliente(clientePF);
                     break;
                 case 2:
-                    listarCliente(clientePF);
+                    listarCliente(facade.listarCLientePF(clientePF));
                     break;
                 case 3:
                     deletarCliente(cpf);
@@ -51,7 +51,7 @@ public class UiClientePF {
 
     }
 
-    private void atualizarCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
+    private void atualizarCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
 
         System.out.println("Digite o nome do cliente para atualizar cadastro");
@@ -66,7 +66,7 @@ public class UiClientePF {
 
     }
 
-    private void deletarCliente(String cpf) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
+    private void deletarCliente(String cpf) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
         System.out.println("Digite o CLiente a ser deletado");
         ClientePF clientePF = new ClientePF();
@@ -75,7 +75,7 @@ public class UiClientePF {
 
         try {
             facade.deletarClientePF(clientePF);
-        }catch (Exception e){
+        }catch (ClientePFException | RepositoryClientePFException e){
             e.getMessage();
         }
 
@@ -83,20 +83,17 @@ public class UiClientePF {
     }
 
 
-    private void listarCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
-        Facade facade = new Facade();
+    private void listarCliente(ArrayList<ClientePF> clientePFArrayList) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
+        if (clientePFArrayList != null) {
+            for (int i = 0; i <clientePFArrayList.size() ; i++) {
+                System.out.println("Nome : " + clientePFArrayList.get(i).getNome() + "\nCPF: "+ clientePFArrayList.get(i).getCpf() +
+                        "\n - Tipo CNH " + clientePFArrayList.get(i).getNumeroCNH());
+            }
 
-        try {
-            facade.listarCLientePF(clientePF);
-            showMenu();
-
-        }catch (Exception e){
-            e.getMessage();
-            showMenu();
         }
     }
 
-    private void inserirCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
+    private void inserirCliente(ClientePF clientePF) throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
         facade.inserirClientePF(clientePF);
 
@@ -116,13 +113,12 @@ public class UiClientePF {
         clientePF.setNumeroCNH(scanner.next());
         try {
             facade.inserirClientePF(clientePF);
-            showMenu();
+            showMenu(facade);
         }catch (RepositoryClientePFException e){
             e.getMessage();
-            showMenu();
+            showMenu(facade);
         }
     }
-
 
 
 }

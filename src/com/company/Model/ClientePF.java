@@ -80,6 +80,11 @@ public class ClientePF extends Pessoa {
     }
 
     @Override
+    public int size() {
+        return 0;
+    }
+
+    @Override
     public String toString() {
         return "ClientePF{" +
                 "cpf='" + cpf + '\'' +
@@ -88,4 +93,6 @@ public class ClientePF extends Pessoa {
                 ", numeroCNH='" + numeroCNH + '\'' +
                 '}';
     }
+
+
 }

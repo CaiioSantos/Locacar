@@ -4,13 +4,14 @@ import com.company.Exception.ClientePFException;
 import com.company.Exception.RepositoryClientePFException;
 import com.company.Model.ClientePF;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface IRepositoryClientePF {
 
     void inserirClientePF(ClientePF clientePf) throws ClientePFException, RepositoryClientePFException;
-    void deletarClientePF(String clientePf) throws ClientePFException, RepositoryClientePFException;
-    List<ClientePF> listarCLientePF(ClientePF clientePf);
+    void deletarClientePF(ClientePF clientePf) throws ClientePFException, RepositoryClientePFException;
+    ArrayList<ClientePF> listarCLientePF(ClientePF clientePf);
     void updateClientePF(ClientePF clientePf) throws ClientePFException;
 
 }

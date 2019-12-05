@@ -4,6 +4,7 @@ import com.company.Controller.*;
 import com.company.Exception.*;
 import com.company.Model.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Facade implements IControllerClientePF, IControllerClientePJ, IControllerGerente, IControllerAtendente,IControllerVeiculoPasseio , IControllerVeiculoTrabalho{
@@ -23,13 +24,13 @@ public class Facade implements IControllerClientePF, IControllerClientePJ, ICont
     private IControllerLocar iControllerLocar = ControllerLocar.getInstance();
     private IControllerLocar controllerLocar;
 
-    private static Facade getInstance() throws ClientePFException, RepositoryClientePFException, ClientePJException, RepositoryClientePJException, GerenteException {
+    private static Facade getInstance() throws ClientePFException, RepositoryClientePFException, ClientePJException, RepositoryClientePJException, GerenteException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         if(instancia == null){
             instancia = new Facade();
         }
         return instancia;
     }
-    public Facade() throws ClientePFException, RepositoryClientePFException, RepositoryClientePJException, ClientePJException, GerenteException {
+    public Facade() throws ClientePFException, RepositoryClientePFException, RepositoryClientePJException, ClientePJException, GerenteException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         controllerClientePF = ControllerClientePF.getInstance();
         controllerClientePJ = ControllerClientePJ.getInstance();
         controllerGerente = ControllerGerente.getInstance();
@@ -50,7 +51,7 @@ public class Facade implements IControllerClientePF, IControllerClientePJ, ICont
     }
 
     @Override
-    public List<ClientePF> listarCLientePF(ClientePF clientePf) {
+    public ArrayList<ClientePF> listarCLientePF(ClientePF clientePf) {
         return this.controllerClientePF.listarCLientePF(clientePf);
     }
 
@@ -127,7 +128,7 @@ public class Facade implements IControllerClientePF, IControllerClientePJ, ICont
 
     //Metodos referentes ao veiculo passeio
     @Override
-    public void inserirVeiculoPasseio(VeiculoPasseio veiculoPasseio) {
+    public void inserirVeiculoPasseio(VeiculoPasseio veiculoPasseio) throws VeiculoPasseioException, RepositoryVeiculoPasseioException {
         this.controllerVeiculoPasseio.inserirVeiculoPasseio(veiculoPasseio);
     }
 
@@ -172,7 +173,7 @@ public class Facade implements IControllerClientePF, IControllerClientePJ, ICont
     }
 
     public void listarLocar(Locar locar) {
-        this.controllerLocar.listarLocar(locar);
+        this.controllerLocar.listaLocar(locar);
     }
 
     public void deletarLocar(Locar locar) {

@@ -43,7 +43,7 @@ public class ControllerLocar implements IControllerLocar  {
 
     @Override
     public List<Locar> listaLocar(Locar locar) {
-        return this.repositoryLocar.update(locar);
+        return this.repositoryLocar.listar(locar);
     }
 
     @Override

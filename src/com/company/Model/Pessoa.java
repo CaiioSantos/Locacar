@@ -30,4 +30,5 @@ abstract public  class Pessoa {
         this.endereco = endereco;
     }
 
+    public abstract int size();
 }

@@ -10,7 +10,7 @@ public class UiAtendente {
     Scanner scanner = new Scanner(System.in);
 
 
-    public void showMenu() throws ClientePFException, RepositoryClientePFException, GerenteException, ClientePJException, RepositoryClientePJException {
+    public void showMenu() throws ClientePFException, RepositoryClientePFException, GerenteException, ClientePJException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Atendente atendente = new Atendente();
         Facade facade = new Facade();
         int opcao = 0;
@@ -50,22 +50,22 @@ public class UiAtendente {
 
     }
 
-    private void atualizarAtendente(Atendente atendente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+    private void atualizarAtendente(Atendente atendente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
         facade.atualizarAtendente(atendente);
     }
 
-    private void deletarAtendente(Atendente atendente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+    private void deletarAtendente(Atendente atendente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
         facade.deletarAtendente(atendente);
     }
 
-    private void listarAtendente(Atendente atendente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+    private void listarAtendente(Atendente atendente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
         facade.listarAtendente(atendente);
     }
 
-    private void inserirAtendente(Atendente atendente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+    private void inserirAtendente(Atendente atendente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
         facade.inserirAtendente(atendente);
 

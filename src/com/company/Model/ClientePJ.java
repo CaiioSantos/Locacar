@@ -68,4 +68,9 @@ public class ClientePJ extends Pessoa {
     public void setEndereco(String endereco) {
         super.setEndereco(endereco);
     }
+
+    @Override
+    public int size() {
+        return 0;
+    }
 }

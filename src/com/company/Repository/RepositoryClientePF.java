@@ -5,7 +5,7 @@ import com.company.Exception.RepositoryClientePFException;
 import com.company.Model.ClientePF;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class RepositoryClientePF implements IRepositoryClientePF {
     private ArrayList <ClientePF> clientePfArrayList;
@@ -47,7 +47,7 @@ public class RepositoryClientePF implements IRepositoryClientePF {
 
 
     @Override
-    public void deletarClientePF(String clientePf) throws ClientePFException, RepositoryClientePFException {
+    public void deletarClientePF(ClientePF clientePf) throws ClientePFException, RepositoryClientePFException {
         if (clientePf == null){
             throw new RepositoryClientePFException("Cliente Invalidado");
         }if (existeClientePF(clientePf.getCpf())){
@@ -59,7 +59,7 @@ public class RepositoryClientePF implements IRepositoryClientePF {
     }
 
     @Override
-    public List<ClientePF> listarCLientePF(ClientePF clientePf) {
+    public ArrayList<ClientePF> listarCLientePF(ClientePF clientePf) {
         return clientePfArrayList;
     }
 

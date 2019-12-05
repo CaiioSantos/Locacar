@@ -1,6 +1,8 @@
 package com.company.Repository;
 
 
+import com.company.Exception.RepositoryVeiculoPasseioException;
+import com.company.Exception.VeiculoPasseioException;
 import com.company.Model.VeiculoPasseio;
 
 import java.util.ArrayList;
@@ -10,7 +12,7 @@ public class RepositoryVeiculoPasseio implements IRepositoryVeiculoPasseio {
     private ArrayList<VeiculoPasseio> veiculoPasseioArrayList;
     private static RepositoryVeiculoPasseio instancia;
 
-    public static RepositoryVeiculoPasseio getInstance() {
+    public static RepositoryVeiculoPasseio getInstance() throws RepositoryVeiculoPasseioException , VeiculoPasseioException {
         if (instancia == null) {
             instancia = new RepositoryVeiculoPasseio();
         }

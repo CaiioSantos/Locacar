@@ -53,6 +53,11 @@ public class Gerente extends  Funcionario {
         super.setEndereco(endereco);
     }
 
+    @Override
+    public int size() {
+        return 0;
+    }
+
     public String getSalario() {
         return salario;
     }

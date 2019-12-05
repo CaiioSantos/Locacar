@@ -10,7 +10,7 @@ public class UiVeiculoTrabalho {
     Scanner scanner = new Scanner(System.in);
 
 
-    public void showMenu() throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
+    public void showMenu() throws ClientePFException, RepositoryClientePFException, ClientePJException, GerenteException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         VeiculoTrabalho veiculoTrabalho = new VeiculoTrabalho();
         Facade facade = new Facade();
         int opcao = 0;
@@ -49,22 +49,22 @@ public class UiVeiculoTrabalho {
 
     }
 
-    private void atualizarVeiculoTrabalho(VeiculoTrabalho veiculoTrabalho) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+    private void atualizarVeiculoTrabalho(VeiculoTrabalho veiculoTrabalho) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
         facade.updateVeiculoTrabalho(veiculoTrabalho);
     }
 
-    private void deletarVeiculoTrabalho(VeiculoTrabalho veiculoTrabalho) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+    private void deletarVeiculoTrabalho(VeiculoTrabalho veiculoTrabalho) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
         facade.deletarVeiculoTrabalho(veiculoTrabalho);
     }
 
-    private void listarVeiculoTrabalho(VeiculoTrabalho veiculoTrabalho) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+    private void listarVeiculoTrabalho(VeiculoTrabalho veiculoTrabalho) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
         facade.listarVeiculoTrabalho(veiculoTrabalho);
     }
 
-    private void inserirVeiculoTrabalho(VeiculoTrabalho veiculoTrabalho) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+    private void inserirVeiculoTrabalho(VeiculoTrabalho veiculoTrabalho) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
         facade.inserirVeiculoTrabalho(veiculoTrabalho);
 
@@ -84,8 +84,8 @@ public class UiVeiculoTrabalho {
         try {
             facade.inserirVeiculoTrabalho(veiculoTrabalho);
             showMenu();
-        } catch (RepositoryVeiculoTrabalhoException e) {
-            System.out.println("Opa Deu merda");
+        } catch (RepositoryClientePFException e) {
+                e.getMessage();
         }
     }
 }

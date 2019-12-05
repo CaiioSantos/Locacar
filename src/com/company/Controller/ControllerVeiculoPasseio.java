@@ -1,6 +1,8 @@
 package com.company.Controller;
 
 
+import com.company.Exception.RepositoryVeiculoPasseioException;
+import com.company.Exception.VeiculoPasseioException;
 import com.company.Model.VeiculoPasseio;
 import com.company.Repository.RepositoryVeiculoPasseio;
 
@@ -10,9 +12,9 @@ public class ControllerVeiculoPasseio implements IControllerVeiculoPasseio {
     private static ControllerVeiculoPasseio instancia;
         private RepositoryVeiculoPasseio repositoryVeiculoPasseio = RepositoryVeiculoPasseio.getInstance();
 
-        public ControllerVeiculoPasseio()  {
+        public ControllerVeiculoPasseio() throws RepositoryVeiculoPasseioException, VeiculoPasseioException {
         }
-        public static ControllerVeiculoPasseio getInstance() {
+        public static ControllerVeiculoPasseio getInstance() throws RepositoryVeiculoPasseioException, VeiculoPasseioException {
             if (instancia == null){
                 instancia = new ControllerVeiculoPasseio();
             }

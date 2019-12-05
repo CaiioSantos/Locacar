@@ -2,7 +2,7 @@ package com.company.Model;
 
 public abstract class Plano {
 
-    private String planoSemanal;
+   private String planoSemanal;
     private String planoMensal;
     private String planoAnual;
 

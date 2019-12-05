@@ -7,7 +7,8 @@ import com.company.Model.ClientePF;
 import com.company.Repository.RepositoryClientePF;
 
 
-import java.util.List;
+import java.util.ArrayList;
+
 
 public class ControllerClientePF implements IControllerClientePF {
     private static ControllerClientePF instancia;
@@ -34,8 +35,8 @@ public class ControllerClientePF implements IControllerClientePF {
     }
 
     @Override
-    public List<ClientePF> listarCLientePF(ClientePF clientePf) {
-        return this.repositoryClientePF.listarCLientePF(clientePf);
+    public ArrayList<ClientePF> listarCLientePF(ClientePF clientePf) {
+        return (ArrayList<ClientePF>) this.repositoryClientePF.listarCLientePF(clientePf);
 
     }
 

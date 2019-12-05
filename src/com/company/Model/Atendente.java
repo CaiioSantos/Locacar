@@ -43,6 +43,11 @@ public class Atendente extends Funcionario{
         super.setEndereco(endereco);
     }
 
+    @Override
+    public int size() {
+        return 0;
+    }
+
     public Atendente() {
     }
     public String getComissaoVenda() {

@@ -10,7 +10,7 @@ public class UiGerente {
     Scanner scanner = new Scanner(System.in);
 
 
-    public void showMenu() throws ClientePFException, RepositoryClientePFException, GerenteException, ClientePJException, RepositoryClientePJException {
+    public void showMenu() throws ClientePFException, RepositoryClientePFException, GerenteException, ClientePJException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Gerente gerente = new Gerente();
         Facade facade = new Facade();
         int opcao = 0;
@@ -50,22 +50,22 @@ public class UiGerente {
 
     }
 
-    private void atualizarGerente(Gerente gerente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+    private void atualizarGerente(Gerente gerente) throws GerenteException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException, ClientePFException {
         Facade facade = new Facade();
         facade.atualizarGerente(gerente);
     }
 
-    private void deletarGerente(Gerente gerente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+    private void deletarGerente(Gerente gerente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
         facade.deletarGerente(gerente);
     }
 
-    private void listarGerente(Gerente gerente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+    private void listarGerente(Gerente gerente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
         facade.listarGerente(gerente);
     }
 
-    private void inserirGerente(Gerente gerente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+    private void inserirGerente(Gerente gerente) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
         facade.inserirGerente(gerente);
 
@@ -91,8 +91,8 @@ public class UiGerente {
         try {
             facade.inserirGerente(gerente);
             showMenu();
-        }catch (Exception e){
-            System.out.println("Opa Deu merda");
+        }catch (RepositoryClientePJException | ClientePJException e){
+            e.getMessage();
         }
     }
 

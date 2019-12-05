@@ -13,7 +13,7 @@ public class Main {
 
 
 
-    public static void main(String[] args) throws RepositoryClientePFException, ClientePFException, ClientePJException, GerenteException, RepositoryClientePJException {
+    public static void main(String[] args) throws RepositoryClientePFException, ClientePFException, ClientePJException, GerenteException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
 
         int opcao;
 
@@ -22,11 +22,11 @@ public class Main {
 
         System.out.println("Escolha uma opção \n1 - Cadastro de CLiente Fisica \n2 - Cadastro Cliente Juridica ");
         opcao = s.nextInt();
-
+        Facade facade = new Facade();
         switch (opcao) {
             case 1:
                 UiClientePF uiClientePF = new UiClientePF();
-                uiClientePF.showMenu();
+                uiClientePF.showMenu(facade);
             case 2:
                 UiClientePJ uiClientePJ = new UiClientePJ();
                 uiClientePJ.showMenu();

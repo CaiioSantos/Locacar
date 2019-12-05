@@ -12,7 +12,7 @@ public class UiLocar {
     Scanner scanner = new Scanner(System.in);
 
 
-    public void showMenu() throws ClientePFException, RepositoryClientePFException, GerenteException, ClientePJException, RepositoryClientePJException {
+    public void showMenu() throws ClientePFException, RepositoryClientePFException, GerenteException, ClientePJException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Locar locar = new Locar();
         Facade facade = new Facade();
         int opcao = 0;
@@ -52,22 +52,22 @@ public class UiLocar {
 
     }
 
-    private void atualizarLocar(Locar locar) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+    private void atualizarLocar(Locar locar) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
         facade.atualizarLocar(locar);
     }
 
-    private void deletarLocar(Locar locar) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+    private void deletarLocar(Locar locar) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
         facade.deletarLocar(locar);
     }
 
-    private void listarLocar(Locar locar) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+    private void listarLocar(Locar locar) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
         facade.listarLocar(locar);
     }
 
-    private void inserirLocar(Locar locar) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException {
+    private void inserirLocar(Locar locar) throws GerenteException, ClientePFException, ClientePJException, RepositoryClientePFException, RepositoryClientePJException, RepositoryVeiculoPasseioException, VeiculoPasseioException {
         Facade facade = new Facade();
         facade.inserirLocar(locar);
 
@@ -85,15 +85,8 @@ public class UiLocar {
         locar.setDataEntrega(scanner.next());
 
 
-
-
-
-        try {
-            facade.inserirLocar(locar);
-            showMenu();
-        }catch (RepositoryLocarException e){
-            System.out.println("Opa Deu merda");
-        }
+        facade.inserirLocar(locar);
+        showMenu();
     }
 
 
